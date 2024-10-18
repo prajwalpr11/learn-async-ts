@@ -1,1 +1,28 @@
 Explain the code execution based on the order of the messages logged in src/quiz/promise-2darray.txt.
+1. First Call to sum2DArray (array2D):
+    'Sum called ...' is logged.
+    'Returning from sum' is logged.
+    The promise object is created and logged (sumPromise1: [object Promise]).
+    sumPromise1: Promise { <pending> }
+
+    Second Call to sum2DArray (Empty Array):
+    'Sum called ...' is logged.
+    The promise object is created and logged (sumPromise2: [object Promise]).
+    Since the array is empty, sumPromise2: Promise { <rejected> 'Cannot sum an empty array' }
+    'Error with empty array: Cannot sum an empty array' is logged.
+
+    The setTimeout for the First call executes after the synchronous code completes:
+    Logs each element being added to the sum:
+    Adding 1 to sum
+    Adding 2 to sum
+    Adding 3 to sum
+    Adding 4 to sum
+    Adding 5 to sum
+    Adding 6 to sum
+    Adding 7 to sum
+    Adding 8 to sum
+    Adding 9 to sum
+    45
+
+
+
